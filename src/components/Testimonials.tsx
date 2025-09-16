@@ -4,37 +4,36 @@ import React from 'react';
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "Our payment processing efficiency increased by 40% and transaction failures dropped to near zero. The automation features are game-changing.",
-      author: "Sarah Johnson",
-      position: "CFO at TechCorp",
-      avatar: "bg-cosmic-light/30"
+      quote: 'BugLens cut our MTTR almost in half. The AI traces point straight to the line of code and the deploy that caused it.',
+      author: 'Aisha Patel',
+      position: 'Head of Engineering, LoopPay',
+      avatar: 'https://randomuser.me/api/portraits/women/68.jpg'
     },
     {
-      quote: "The real-time analytics and fraud detection capabilities have saved us millions. We can spot issues before they become problems.",
-      author: "Michael Chen",
-      position: "Head of Risk at FinanceFlow",
-      avatar: "bg-cosmic-light/20"
+      quote: 'We went from drowning in alerts to signal we can act on. Noise is down 60% and on-call is humane again.',
+      author: 'Jonas Müller',
+      position: 'Platform Lead, NordStack',
+      avatar: 'https://randomuser.me/api/portraits/men/12.jpg'
     },
     {
-      quote: "Compliance used to be a nightmare. Now our regulatory reporting is automated and we're always audit-ready.",
-      author: "Leila Rodriguez",
-      position: "Operations Director at GlobalPay",
-      avatar: "bg-cosmic-light/40"
+      quote: 'The Slack + GitHub workflow is tight. Incidents open with context, PRs link automatically, and fixes land faster.',
+      author: 'Mei Chen',
+      position: 'EM, Nova SaaS',
+      avatar: 'https://randomuser.me/api/portraits/women/32.jpg'
     }
   ];
   
   return (
     <section className="w-full py-20 px-6 md:px-12 bg-card relative overflow-hidden">
-      {/* Background grid */}
-      <div className="absolute inset-0 cosmic-grid opacity-20"></div>
+      <div className="absolute inset-0 neural-grid opacity-10"></div>
       
       <div className="max-w-7xl mx-auto space-y-16 relative z-10">
         <div className="text-center space-y-4 max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-foreground">
-            Trusted by finance teams worldwide
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-foreground">
+            Loved by modern engineering teams
           </h2>
           <p className="text-muted-foreground text-lg">
-            See how our platform transforms financial operations for businesses
+            Real outcomes, not vanity metrics: faster resolution and fewer pages.
           </p>
         </div>
         
@@ -51,7 +50,7 @@ const Testimonials = () => {
               </div>
               <p className="text-lg mb-8 text-foreground/90 italic">"{testimonial.quote}"</p>
               <div className="flex items-center gap-4">
-                <div className={`h-12 w-12 rounded-full ${testimonial.avatar} bg-muted`}></div>
+                <img src={testimonial.avatar} alt={testimonial.author} className="h-12 w-12 rounded-full object-cover" />
                 <div>
                   <h4 className="font-medium text-foreground">{testimonial.author}</h4>
                   <p className="text-sm text-muted-foreground">{testimonial.position}</p>

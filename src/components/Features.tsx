@@ -1,145 +1,149 @@
 import React, { useState } from 'react';
 import { Badge } from '@/components/ui/badge';
-import { 
-  Zap, 
-  Globe, 
-  Shield, 
-  BarChart3, 
-  Code, 
-  GitBranch, 
-  Layers, 
-  Cloud, 
-  Cpu, 
-  Lock,
+import {
+  Brain,
+  LineChart,
+  BellRing,
+  GitBranch,
+  Github,
+  Slack,
+  Layers,
+  Users,
+  CheckCircle,
   ArrowUpRight,
-  CheckCircle
 } from 'lucide-react';
 
 const Features = () => {
   const [hoveredFeature, setHoveredFeature] = useState<number | null>(null);
-  
+
   const features = [
     {
-      icon: Zap,
-      title: "Auto-Scaling Infrastructure",
-      description: "Scale from 0 to millions of requests instantly with our serverless architecture",
+      icon: Brain,
+      title: 'AI Root Cause Analysis',
+      description:
+        'Auto-correlate logs, traces, and deploys to explain failures and suggest fixes.',
       details: [
-        "Zero-config auto-scaling",
-        "Sub-second cold start times", 
-        "Pay only for compute used",
-        "99.99% uptime guarantee"
+        'Correlation across services and releases',
+        'Code-aware insights with line-level pointers',
+        'Suggested remediation steps',
+        'Open a Jira ticket in one click',
       ],
-      color: "text-primary",
-      bgColor: "bg-primary/10",
-      borderColor: "border-primary/30"
+      color: 'text-primary',
+      bgColor: 'bg-primary/10',
+      borderColor: 'border-primary/30',
     },
     {
-      icon: Globe,
-      title: "Multi-Cloud Deployment",
-      description: "Deploy across AWS, GCP, and Azure with a single command",
+      icon: LineChart,
+      title: 'Real-time Monitoring',
+      description:
+        'Near-zero lag streams with anomaly detection designed for production SaaS.',
       details: [
-        "23 global regions available",
-        "Intelligent traffic routing",
-        "Cross-cloud failover",
-        "Edge computing support"
+        'Live error feed and trends',
+        'Latency and throughput overlays',
+        'P99 spikes flagged automatically',
+        'No sampling surprises',
       ],
-      color: "text-secondary",
-      bgColor: "bg-secondary/10", 
-      borderColor: "border-secondary/30"
+      color: 'text-secondary',
+      bgColor: 'bg-secondary/10',
+      borderColor: 'border-secondary/30',
     },
     {
-      icon: Shield,
-      title: "Enterprise Security",
-      description: "SOC 2 Type II certified with end-to-end encryption",
+      icon: BellRing,
+      title: 'Smart Alerts',
+      description:
+        'Noise suppression, duplicate grouping, and severity tuning that learns.',
       details: [
-        "Zero-trust architecture",
-        "Private VPC deployment",
-        "Compliance automation",
-        "Audit trail logging"
+        'Auto-grouped incidents',
+        'Dedup across services and pods',
+        'Tunable sensitivity per env',
+        'Routing rules by team and hours',
       ],
-      color: "text-accent",
-      bgColor: "bg-accent/10",
-      borderColor: "border-accent/30"
-    },
-    {
-      icon: BarChart3,
-      title: "Real-time Monitoring",
-      description: "Comprehensive observability with custom dashboards and alerts",
-      details: [
-        "Sub-millisecond metrics",
-        "Custom alert policies", 
-        "Performance insights",
-        "Cost optimization tips"
-      ],
-      color: "text-primary",
-      bgColor: "bg-primary/10",
-      borderColor: "border-primary/30"
-    },
-    {
-      icon: Code,
-      title: "Developer Experience",
-      description: "Simple APIs, powerful SDKs, and comprehensive documentation",
-      details: [
-        "One-line deployment",
-        "Native SDK support",
-        "Interactive docs",
-        "24/7 developer support"
-      ],
-      color: "text-secondary",
-      bgColor: "bg-secondary/10",
-      borderColor: "border-secondary/30"
+      color: 'text-accent',
+      bgColor: 'bg-accent/10',
+      borderColor: 'border-accent/30',
     },
     {
       icon: GitBranch,
-      title: "Version Control",
-      description: "Built-in model versioning with rollback and A/B testing",
+      title: 'Seamless Integrations',
+      description:
+        'Close the loop with GitHub PRs, Jira issues, and Slack on-call workflows.',
       details: [
-        "Git-like versioning",
-        "Instant rollbacks", 
-        "Traffic splitting",
-        "Canary deployments"
+        'Link deploys to error spikes',
+        'PR autolink and blame hints',
+        'Two-way Jira sync',
+        'Slack incident channels',
       ],
-      color: "text-accent",
-      bgColor: "bg-accent/10",
-      borderColor: "border-accent/30"
-    }
+      color: 'text-primary',
+      bgColor: 'bg-primary/10',
+      borderColor: 'border-primary/30',
+      integrations: [
+        { name: 'Slack', icon: Slack },
+        { name: 'GitHub', icon: Github },
+      ],
+    },
+    {
+      icon: Users,
+      title: 'Team Collaboration',
+      description:
+        'Assign, comment, and resolve together with full audit trails for EMs.',
+      details: [
+        'Ownership by service/team',
+        'Comment threads on incidents',
+        'Status pages and SLOs',
+        'Role-based access control',
+      ],
+      color: 'text-secondary',
+      bgColor: 'bg-secondary/10',
+      borderColor: 'border-secondary/30',
+    },
+    {
+      icon: Layers,
+      title: 'Developer Experience',
+      description:
+        'Clean SDKs, copyable code snippets, and docs that get out of your way.',
+      details: [
+        'Lightweight SDK footprint',
+        'Type-safe APIs',
+        'Copy-to-clipboard snippets',
+        'Privacy-first analytics',
+      ],
+      color: 'text-accent',
+      bgColor: 'bg-accent/10',
+      borderColor: 'border-accent/30',
+    },
   ];
 
   const stats = [
-    { label: "Models Deployed", value: "2.5M+", subtext: "Across all platforms" },
-    { label: "API Calls/Month", value: "50B+", subtext: "With 99.9% reliability" },
-    { label: "Enterprise Customers", value: "500+", subtext: "Trust our platform" },
-    { label: "Average Latency", value: "<100ms", subtext: "Global P99 response time" }
+    { label: 'MTTR reduction', value: '-43%', subtext: 'Across pilot cohorts' },
+    { label: 'Alert noise', value: '-58%', subtext: 'With smart grouping' },
+    { label: 'Teams onboarded', value: '1,200+', subtext: 'From startups to scaleups' },
+    { label: 'Lag to detection', value: '< 1s', subtext: 'Live stream' },
   ];
-  
+
+  const onIntegrationExpand = (name: string) => {
+    window.dispatchEvent(new CustomEvent('integration_expand', { detail: name }));
+  };
+
   return (
     <section id="features" className="relative w-full py-24 md:py-32 px-6 md:px-12 overflow-hidden">
-      {/* Background Elements */}
       <div className="absolute inset-0 neural-grid opacity-10"></div>
-      <div className="absolute top-20 right-20 w-72 h-72 neural-gradient-secondary rounded-full opacity-10 blur-3xl animate-float-subtle"></div>
+      <div className="absolute top-20 right-20 w-72 h-72 neural-gradient-secondary rounded-full opacity-10 blur-3xl"></div>
       
       <div className="relative max-w-7xl mx-auto space-y-20">
-        {/* Section Header */}
         <div className="text-center space-y-6 max-w-4xl mx-auto">
           <Badge variant="outline" className="px-4 py-2 border-primary/30 bg-primary/5 text-primary">
-            <Layers className="w-4 h-4 mr-2" />
-            Infrastructure Features
+            Signal over noise for modern dev teams
           </Badge>
           
           <h2 className="text-4xl md:text-6xl font-bold tracking-tighter">
-            Everything you need to{' '}
-            <span className="neural-gradient bg-clip-text text-transparent">
-              scale AI
-            </span>
+            Ship faster with fewer incidents
           </h2>
           
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            From rapid prototyping to production-scale deployments, 
-            our platform provides the infrastructure primitives that power the world's most advanced AI applications.
+            BugLens auto-explains production issues, so developers fix what matters and EMs get the stability and visibility they need.
           </p>
         </div>
 
-        {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <div key={index} className="text-center space-y-2">
@@ -150,7 +154,6 @@ const Features = () => {
           ))}
         </div>
         
-        {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div
@@ -162,13 +165,12 @@ const Features = () => {
               }`}
               onMouseEnter={() => setHoveredFeature(index)}
               onMouseLeave={() => setHoveredFeature(null)}
+              onClick={() => feature.title === 'Seamless Integrations' && onIntegrationExpand('integrations')}
             >
-              {/* Icon */}
               <div className={`w-14 h-14 rounded-xl ${feature.bgColor} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                 <feature.icon className={`w-7 h-7 ${feature.color}`} />
               </div>
               
-              {/* Content */}
               <div className="space-y-4">
                 <div>
                   <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
@@ -179,9 +181,8 @@ const Features = () => {
                   </p>
                 </div>
 
-                {/* Feature Details */}
                 <div className={`space-y-2 transition-all duration-300 ${
-                  hoveredFeature === index ? 'opacity-100 max-h-40' : 'opacity-70 max-h-0 overflow-hidden'
+                  hoveredFeature === index ? 'opacity-100 max-h-48' : 'opacity-70 max-h-0 overflow-hidden'
                 }`}>
                   {feature.details.map((detail, detailIndex) => (
                     <div key={detailIndex} className="flex items-center space-x-2 text-sm">
@@ -191,7 +192,16 @@ const Features = () => {
                   ))}
                 </div>
 
-                {/* Learn More Link */}
+                {feature.integrations && (
+                  <div className="flex gap-2 pt-2">
+                    {feature.integrations.map((i, idx) => (
+                      <span key={idx} className="inline-flex items-center gap-2 text-xs px-2 py-1 rounded-md bg-muted/50 border border-border">
+                        <i.icon className="w-4 h-4" /> {i.name}
+                      </span>
+                    ))}
+                  </div>
+                )}
+
                 <div className={`pt-2 transition-all duration-300 ${
                   hoveredFeature === index ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
                 }`}>
@@ -205,22 +215,21 @@ const Features = () => {
           ))}
         </div>
 
-        {/* CTA Section */}
         <div className="text-center space-y-6 pt-12">
           <h3 className="text-2xl md:text-3xl font-semibold text-foreground">
-            Ready to build the future?
+            See BugLens in your stack
           </h3>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Join thousands of developers and enterprises who trust our infrastructure to power their AI applications.
+            Connect Slack, GitHub, and your CI in minutes. Start fixing, not digging.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-            <button className="neural-gradient px-8 py-4 rounded-lg text-background font-semibold text-lg hover:scale-105 transition-transform glow-primary">
-              Start Building Now
-            </button>
-            <button className="px-8 py-4 rounded-lg border border-primary/30 text-foreground hover:bg-primary/5 transition-colors">
-              Schedule Demo
-            </button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-2">
+            <a href="https://buglens.io/signup" className="neural-gradient px-8 py-4 rounded-lg text-background font-semibold text-lg hover:scale-105 transition-transform glow-primary" onClick={() => window.dispatchEvent(new CustomEvent('cta_click', { detail: 'features_start_trial' }))}>
+              Start free trial
+            </a>
+            <a href="#pricing" className="px-8 py-4 rounded-lg border border-primary/30 text-foreground hover:bg-primary/5 transition-colors">
+              View pricing
+            </a>
           </div>
         </div>
       </div>
