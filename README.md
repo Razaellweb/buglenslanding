@@ -1,73 +1,61 @@
-# Welcome to your Lovable project
+# 🐞 BugLens
 
-## Project info
+**BugLens** is an intelligent assistant that helps teams spot, understand, and prioritize issues faster.  
+Instead of just listing bugs, BugLens gives you *insight* — helping you see what really matters and why it’s happening.
 
-**URL**: https://lovable.dev/projects/bb45fe55-9940-4055-a46f-2de2effdefa7
+---
 
-## How can I edit this code?
+## 💡 What It Does
 
-There are several ways of editing your application.
+- Automatically identifies and groups related bugs  
+- Highlights recurring issues across different parts of your system  
+- Prioritizes bugs based on severity, frequency, and impact  
+- Generates clear, human-friendly explanations of each issue  
+- Summarizes the overall health of your product or project  
 
-**Use Lovable**
+With BugLens, debugging becomes a guided process instead of a guessing game.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/bb45fe55-9940-4055-a46f-2de2effdefa7) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🎯 Why It’s Useful
 
-**Use your preferred IDE**
+- Saves hours of manual triage and investigation  
+- Keeps developers focused on what actually needs fixing  
+- Helps teams communicate issues clearly without technical noise  
+- Offers instant overviews for PMs, QA testers, and engineers alike  
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Whether you’re maintaining a large platform or refining an early-stage product, BugLens helps you move from **“What’s broken?”** to **“Here’s what to fix next.”**
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 🚀 How to Use
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. **Run an analysis** on your latest error logs, test results, or feedback reports.  
+2. **View summarized insights** — grouped by issue type, severity, or frequency.  
+3. **Read AI-generated explanations** to understand the root cause in plain English.  
+4. **Act on prioritized recommendations** to fix what matters most first.  
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+It’s that simple — no setup headaches, no complex dashboards. Just clear visibility into your bugs.
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## 🌱 Future Vision
 
-**Edit a file directly in GitHub**
+BugLens is growing into a complete **intelligent debugging companion** — one that can:
+- Learn from your project’s history  
+- Predict potential issues before they happen  
+- Offer proactive improvement suggestions  
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 👤 Author
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+**Abdulazeez Usman**  
+Building smart tools that make development faster, cleaner, and more intentional.  
+📬 [LinkedIn](https://www.linkedin.com/in/abdulazeez-usman-912703244) | [GitHub](https://github.com/razaellweb)
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 🪶 License
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/bb45fe55-9940-4055-a46f-2de2effdefa7) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Open-source under the **MIT License**.
